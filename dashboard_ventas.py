@@ -175,49 +175,6 @@ st.markdown(f"""
   .kpi-sub {{ font-size: 0.75rem; color: {COLORS['text_mid']}; margin-top: 6px; }}
   .page-title {{ font-size: 1.8rem; font-weight: 700; color: {COLORS['text_dark']}; letter-spacing: -0.02em; }}
   .page-subtitle {{ font-size: 0.85rem; color: {COLORS['text_light']}; margin-top: 2px; }}
-  
-  /* ════════════════════════════════════════════════════════════ */
-  /* REGLAS EXTREMAS PARA EL FILE UPLOADER EN NAVEGADORES OSCUROS */
-  /* ════════════════════════════════════════════════════════════ */
-  
-  /* 1. Título superior del uploader (📂 Subir BD de Ventas) */
-  div[data-testid="stFileUploader"] > label,
-  div[data-testid="stFileUploader"] > label p {{
-      color: #ffffff !important;
-      font-weight: 600 !important;
-  }}
-  
-  /* 2. Fondo del recuadro de arrastrar y soltar */
-  [data-testid="stFileUploaderDropzone"] {{
-      background-color: #F8F8F8 !important;
-  }}
-  
-  /* 3. Textos internos ("Drag and drop file here", "Limit 200MB per file...") */
-  [data-testid="stFileUploaderDropzone"] div, 
-  [data-testid="stFileUploaderDropzone"] span, 
-  [data-testid="stFileUploaderDropzone"] small, 
-  [data-testid="stFileUploaderDropzone"] p {{
-      color: #1A1A1A !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-  }}
-  
-  /* 4. Estilo del botón interno "Browse files" */
-  [data-testid="stFileUploaderDropzone"] button {{
-      color: #1A1A1A !important;
-      background-color: #FFFFFF !important;
-      border: 1px solid #C0C0C0 !important;
-  }}
-
-  /* 5. Alertas y advertencias */
-  [data-testid="stNotification"],
-  [data-testid="stAlert"] {{
-      background-color: #FFF3CD !important;
-  }}
-  [data-testid="stNotification"] *,
-  [data-testid="stAlert"] * {{
-      color: #1A1A1A !important;
-  }}
 </style>
 """, unsafe_allow_html=True)
 
