@@ -297,7 +297,7 @@ if uploaded_file is None:
         <div style="font-size:3.5rem; margin-bottom:16px;">📊</div>
         <div style="font-size:1.7rem; font-weight:700; color:{COLORS['text_dark']};
              margin-bottom:12px; letter-spacing:-0.02em;">
-          Dashboard Ejecutivo de Ventas
+          Dashboard Kenman SA
         </div>
         <div style="font-size:0.97rem; color:{COLORS['text_mid']}; line-height:1.7;
              margin-bottom:32px;">
@@ -523,7 +523,7 @@ col_title, col_info = st.columns([3, 1])
 with col_title:
     meses_str = " – ".join([m.capitalize() for m in (sel_mes if sel_mes else meses_disp)]) or "Todos los meses"
     st.markdown(f"""
-    <div class="page-title">Dashboard Ejecutivo de Ventas</div>
+    <div class="page-title">Dashboard Kenman SA</div>
     <div class="page-subtitle">{meses_str} 2026 &nbsp;·&nbsp; Actualización mensual automática</div>
     """, unsafe_allow_html=True)
 with col_info:
@@ -1547,7 +1547,7 @@ st.markdown(f"""
 <div style='border-top:1px solid {COLORS["border"]};padding:16px 0;
      display:flex;justify-content:space-between;
      font-size:0.72rem;color:{COLORS["text_light"]};'>
-  <span>Dashboard Ejecutivo de Ventas 2026 · v2.0 — Alto Contraste</span>
+  <span>Dashboard Kenman SA · v2.0 — Alto Contraste</span>
   <span>Datos: Enero–Diciembre 2026 · Actualización mensual automática</span>
 </div>
 """, unsafe_allow_html=True)
