@@ -162,60 +162,61 @@ st.markdown(f"""
   .stApp {{ background-color: {COLORS['bg']}; }}
   section[data-testid="stSidebar"] {{ background-color: {COLORS['accent']}; }}
   section[data-testid="stSidebar"] * {{ color: #EEEEEE !important; }}
-  section[data-testid="stSidebar"] .stSelectbox label,
-  section[data-testid="stSidebar"] .stMultiSelect label {{
-    color: #CCCCCC !important; font-size: 0.78rem; font-weight: 500;
-    letter-spacing: 0.06em; text-transform: uppercase;
-  }}
-  .section-header {{
-    font-size: 0.70rem; font-weight: 700; letter-spacing: 0.12em;
-    text-transform: uppercase; color: {COLORS['text_light']};
-    border-bottom: 1px solid {COLORS['border']}; padding-bottom: 8px;
-    margin-bottom: 16px; margin-top: 32px;
-  }}
+  section[data-testid="stSidebar"] .stSelectbox label, section[data-testid="stSidebar"] .stMultiSelect label {{ color: #CCCCCC !important; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }}
+  .section-header {{ font-size: 0.70rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: {COLORS['text_light']}; border-bottom: 1px solid {COLORS['border']}; padding-bottom: 8px; margin-bottom: 16px; margin-top: 32px; }}
+  .js-plotly-plot .plotly {{ background: {COLORS['card']} !important; }}
   #MainMenu, footer, header {{ visibility: hidden; }}
   .block-container {{ padding-top: 1.5rem; padding-bottom: 2rem; }}
-
-  /* KPI Cards */
-  .kpi-card {{
-    background: {COLORS['card']}; border-radius: 8px; padding: 14px 16px;
-    border: 1px solid {COLORS['border']}; height: 100%;
-  }}
+  .kpi-card {{ background: {COLORS['card']}; border-radius: 8px; padding: 14px 16px; border: 1px solid {COLORS['border']}; }}
   .kpi-label {{ font-size: 0.70rem; text-transform: uppercase; letter-spacing: 0.06em; color: {COLORS['text_light']}; }}
   .kpi-value {{ font-size: 1.5rem; font-weight: 700; color: {COLORS['text_dark']}; margin-top: 4px; }}
   .kpi-delta-pos {{ color: {COLORS['pos']}; font-size: 0.80rem; }}
   .kpi-delta-neg {{ color: {COLORS['neg']}; font-size: 0.80rem; }}
   .kpi-sub {{ font-size: 0.75rem; color: {COLORS['text_mid']}; margin-top: 6px; }}
-
-  /* Cumplimiento Cards */
-  .cumpl-card {{
-    background: {COLORS['card']}; border-radius: 8px; padding: 12px 14px;
-    border: 1px solid {COLORS['border']}; margin-bottom: 10px;
-  }}
-  .cumpl-label {{ font-size: 0.78rem; font-weight: 600; color: {COLORS['text_dark']}; margin-bottom: 6px; }}
-  .cumpl-values {{ display: flex; justify-content: space-between; font-size: 0.80rem; margin-bottom: 6px; }}
-  .cumpl-bar-bg {{ background: {COLORS['gray1']}; border-radius: 4px; height: 8px; margin-bottom: 4px; }}
-  .cumpl-bar-fill {{ height: 8px; border-radius: 4px; transition: width 0.3s; }}
-  .cumpl-pct {{ font-size: 1.0rem; font-weight: 700; text-align: right; }}
-
   .page-title {{ font-size: 1.8rem; font-weight: 700; color: {COLORS['text_dark']}; letter-spacing: -0.02em; }}
   .page-subtitle {{ font-size: 0.85rem; color: {COLORS['text_light']}; margin-top: 2px; }}
+  
+  /* ════════════════════════════════════════════════════════════ */
+  /* REGLAS EXTREMAS PARA EL FILE UPLOADER EN NAVEGADORES OSCUROS */
+  /* ════════════════════════════════════════════════════════════ */
+  
+  /* 1. Título superior del uploader (📂 Subir BD de Ventas) */
+  div[data-testid="stFileUploader"] > label,
+  div[data-testid="stFileUploader"] > label p {{
+      color: #1A1A1A !important;
+      font-weight: 600 !important;
+  }}
+  
+  /* 2. Fondo del recuadro de arrastrar y soltar */
+  [data-testid="stFileUploaderDropzone"] {{
+      background-color: #F8F8F8 !important;
+  }}
+  
+  /* 3. Textos internos ("Drag and drop file here", "Limit 200MB per file...") */
+  [data-testid="stFileUploaderDropzone"] div, 
+  [data-testid="stFileUploaderDropzone"] span, 
+  [data-testid="stFileUploaderDropzone"] small, 
+  [data-testid="stFileUploaderDropzone"] p {{
+      color: #1A1A1A !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+  }}
+  
+  /* 4. Estilo del botón interno "Browse files" */
+  [data-testid="stFileUploaderDropzone"] button {{
+      color: #1A1A1A !important;
+      background-color: #FFFFFF !important;
+      border: 1px solid #C0C0C0 !important;
+  }}
 
-  [data-testid="stFileUploader"] *, [data-testid="stFileUploaderDropzone"] * {{
-    color: #1A1A1A !important;
+  /* 5. Alertas y advertencias */
+  [data-testid="stNotification"],
+  [data-testid="stAlert"] {{
+      background-color: #FFF3CD !important;
   }}
-  [data-testid="stFileUploader"] section button {{
-    background-color: #E8E8E8 !important; border: 1px solid #C0C0C0 !important;
-  }}
-  [data-testid="stNotification"], [data-testid="stNotification"] *,
-  [data-testid="stAlert"], [data-testid="stAlert"] * {{
-    color: #1A1A1A !important;
-  }}
-  .insight-box {{
-    background: {COLORS['card']}; border: 1px solid {COLORS['border']};
-    border-left: 3px solid {COLORS['gray5']}; border-radius: 6px;
-    padding: 12px 16px; margin-bottom: 8px; font-size: 0.85rem;
-    color: {COLORS['text_dark']};
+  [data-testid="stNotification"] *,
+  [data-testid="stAlert"] * {{
+      color: #1A1A1A !important;
   }}
 </style>
 """, unsafe_allow_html=True)
