@@ -183,7 +183,7 @@ st.markdown(f"""
   /* 1. Título superior del uploader (📂 Subir BD de Ventas) */
   div[data-testid="stFileUploader"] > label,
   div[data-testid="stFileUploader"] > label p {{
-      color: #1A1A1A !important;
+      color: #ffffff !important;
       font-weight: 600 !important;
   }}
   
