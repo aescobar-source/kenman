@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 #  sidebar_state="collapsed" porque los filtros están en el área principal.
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="Dashboard Ejecutivo de Ventas 2026",
+    page_title="Dashboard Kenman SA",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="collapsed",
